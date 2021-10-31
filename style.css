@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Irish Grover', cursive;
+    color:white;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+
+h1{
+    margin-bottom: 50px;
+    margin-top: -50px;
+    font-size: 40px;
+    font-weight: b;
+}
+.drawBoard{
+    display: grid;
+    height: 700px;
+    width: 700px;
+    background-color: white;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    box-shadow: 0px 0px 27px -3px #FFFFFF;
+    margin-left: 25px;
+}
+
+.container{
+    display: flex;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.buttons,#clear{
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+}
+.buttons:focus,
+.buttons:hover, 
+.pickr-container:hover,
+#clear:hover{
+	animation: rainbow 3s infinite;
+}
+
+
+.menu > #clear button:focus{
+    box-shadow: none;
+}
+@keyframes rainbow {
+	from, to { box-shadow: 0 0 18px 0 red }
+	16% { box-shadow: 0 0 18px 0  yellow }
+	32% { box-shadow: 0 0 18px 0  green }
+	48% { box-shadow: 0 0 15px 0  aqua }
+	64% { box-shadow: 0 0 18px 0  blue }
+	80% { box-shadow: 0 0 18px 0  fuchsia }
+}
+
+.rangeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+.pickr-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: whitesmoke;
+}
+    
+    
+.pickr-container p {
+    font-size: 20px;
+    color:black;
+    padding: 10px 0px;
+}
